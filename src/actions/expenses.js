@@ -1,0 +1,26 @@
+import uniqid from 'uniqid';
+
+//ADD_EXPENSE Action Generator
+export const addExpense = ({description = '', note = '', amount = 0, createdAt = 0} = {}) => ({
+  type:'ADD_EXPENSE',
+  expense: {
+    id: uniqid(),
+    description,
+    note,
+    amount,
+    createdAt
+  }
+});
+  
+//REMOVE EXPENSE
+export const removeExpense = ({ id } = {}) => ({
+  type:'REMOVE_EXPENSE',
+  id
+});
+  
+//EDIT EXPENSE
+export const editExpense = (id, updates) => ({
+  type: 'EDIT_EXPENSE',
+  id,
+  updates
+});
