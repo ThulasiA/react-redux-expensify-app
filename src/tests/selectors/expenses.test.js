@@ -56,5 +56,3 @@ test('should sort by amount', () => {
   const action = selectExpense(expenses, filters);
   expect(action).toEqual([expenses[1], expenses[0], expenses[2]]);  
 });
-
- 
