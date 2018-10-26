@@ -1,4 +1,4 @@
-import uniqid from 'uniqid';
+//import uniqid from 'uniqid';
 import database from '../firebase/firebase';
 
 //ADD_EXPENSE Action Generator
@@ -19,6 +19,7 @@ export const startAddExpense = (expenseData = {}) => {
     });
   };
 };
+
 //REMOVE EXPENSE
 export const removeExpense = ({ id } = {}) => ({
   type:'REMOVE_EXPENSE',
@@ -48,6 +49,7 @@ export const startEditExpense = (id, updates) => {
   };
 };
 
+//FETCH EXPENSE
 export const setExpense = (expenses) => ({
   type: 'SET_EXPENSE',
   expenses
