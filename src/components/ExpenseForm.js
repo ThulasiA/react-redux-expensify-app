@@ -1,5 +1,6 @@
 import React from "react";
 import moment from "moment";
+import AutoSuggestion from "./AutoSuggestion";
 import { SingleDatePicker } from "react-dates";
 
 export default class ExpenseForm extends React.Component {
@@ -66,7 +67,7 @@ export default class ExpenseForm extends React.Component {
         <input
           type="text"
           value={this.state.description}
-          placeholder="Expense Name"
+          placeholder="Expense"
           className="text-input"
           autoFocus
           onChange={this.onDescriptionChange}
@@ -95,6 +96,7 @@ export default class ExpenseForm extends React.Component {
         <div>
           <button className="button-layout">Save Expense</button>
         </div>
+        <AutoSuggestion />
       </form>
     );
   }
